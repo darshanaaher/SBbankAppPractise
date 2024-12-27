@@ -104,4 +104,8 @@ public class CustomerServiceImpl {
         customerRepository.save(customer);
         return "Transfer successful!";
     }
+
+    public Optional<Customer> findByCustName(String custName) {
+        return customerRepository.findByCustName(custName);
+    }
 }
